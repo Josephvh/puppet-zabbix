@@ -4,7 +4,49 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v9.2.0](https://github.com/voxpupuli/puppet-zabbix/tree/v9.2.0) (2022-06-03)
+## [v10.0.0](https://github.com/voxpupuli/puppet-zabbix/tree/v10.0.0) (2023-09-06)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-zabbix/compare/v9.2.0...v10.0.0)
+
+**Breaking changes:**
+
+- Drop support for Puppet 6 [\#841](https://github.com/voxpupuli/puppet-zabbix/pull/841) ([smortex](https://github.com/smortex))
+- Drop EoL Debian 9 support [\#837](https://github.com/voxpupuli/puppet-zabbix/pull/837) ([bastelfreak](https://github.com/bastelfreak))
+- puppetlabs/apache: Require 8.x; switch apache ports from string to int [\#835](https://github.com/voxpupuli/puppet-zabbix/pull/835) ([bdeferme](https://github.com/bdeferme))
+- Drop EoL Ubuntu 16.04 [\#833](https://github.com/voxpupuli/puppet-zabbix/pull/833) ([root-expert](https://github.com/root-expert))
+
+**Implemented enhancements:**
+
+- bump puppet/systemd to \< 5.0.0 [\#863](https://github.com/voxpupuli/puppet-zabbix/pull/863) ([jhoblitt](https://github.com/jhoblitt))
+- Add option to restrict API access to specific hosts [\#856](https://github.com/voxpupuli/puppet-zabbix/pull/856) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- Add path for Zabbix 6.0 database schema [\#850](https://github.com/voxpupuli/puppet-zabbix/pull/850) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- Certificate authentication in zabbix\_host resource [\#848](https://github.com/voxpupuli/puppet-zabbix/pull/848) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+
+**Fixed bugs:**
+
+- Configure DirectoryIndex by default [\#854](https://github.com/voxpupuli/puppet-zabbix/pull/854) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- use provided database port in pgpass [\#851](https://github.com/voxpupuli/puppet-zabbix/pull/851) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- Propagate `default_vhost` to zabbix::web [\#826](https://github.com/voxpupuli/puppet-zabbix/pull/826) ([ikcalB](https://github.com/ikcalB))
+
+**Closed issues:**
+
+- RHEL 9 packages fails to install [\#858](https://github.com/voxpupuli/puppet-zabbix/issues/858)
+- Set DirectoryIndex in the zabbix module [\#853](https://github.com/voxpupuli/puppet-zabbix/issues/853)
+- Proxy schema file incorrect for Zabbix 6 [\#838](https://github.com/voxpupuli/puppet-zabbix/issues/838)
+- Mysql charset \(utf8\) and collate \(utf8\_bin\) not idempotent [\#832](https://github.com/voxpupuli/puppet-zabbix/issues/832)
+- Drop deprecated hiera\_hash\(\) [\#777](https://github.com/voxpupuli/puppet-zabbix/issues/777)
+
+**Merged pull requests:**
+
+- Replace deprecated use of mysql\_password [\#880](https://github.com/voxpupuli/puppet-zabbix/pull/880) ([DJClean](https://github.com/DJClean))
+- Provide correct gpgkey for RHEL family, version \> 8. [\#861](https://github.com/voxpupuli/puppet-zabbix/pull/861) ([Joshua-Snapp](https://github.com/Joshua-Snapp))
+- Remove check for Apache 2.4/2.2 [\#859](https://github.com/voxpupuli/puppet-zabbix/pull/859) ([JoshuaSmeda](https://github.com/JoshuaSmeda))
+- Add/rename Linux SNMP templates for Zabbix 6.0+ [\#855](https://github.com/voxpupuli/puppet-zabbix/pull/855) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- Allow latest version of the PostgreSQL module [\#849](https://github.com/voxpupuli/puppet-zabbix/pull/849) ([teluq-pbrideau](https://github.com/teluq-pbrideau))
+- Add charset and collate parameters for zabbix::proxy [\#842](https://github.com/voxpupuli/puppet-zabbix/pull/842) ([xchotard-talentsoft](https://github.com/xchotard-talentsoft))
+- Disable server acceptance tests on Arch Linux [\#836](https://github.com/voxpupuli/puppet-zabbix/pull/836) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v9.2.0](https://github.com/voxpupuli/puppet-zabbix/tree/v9.2.0) (2022-06-05)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-zabbix/compare/v9.1.0...v9.2.0)
 
@@ -12,7 +54,7 @@ These should not affect the functionality of the module.
 
 - Add Zabbix 6.0 support [\#820](https://github.com/voxpupuli/puppet-zabbix/pull/820) ([root-expert](https://github.com/root-expert))
 - add zabbix-server options StartReportWriters and WebServiceURL. [\#811](https://github.com/voxpupuli/puppet-zabbix/pull/811) ([Heidistein](https://github.com/Heidistein))
-- Add AIX 7 support [\#807](https://github.com/voxpupuli/puppet-zabbix/pull/807) ([cchallenorskytap](https://github.com/cchallenorskytap))
+- Add AIX 7 support [\#807](https://github.com/voxpupuli/puppet-zabbix/pull/807) ([ghost](https://github.com/ghost))
 - Add RedHat 8 support [\#805](https://github.com/voxpupuli/puppet-zabbix/pull/805) ([tjikkun](https://github.com/tjikkun))
 - Added ability to keep templates in sync \(no manual changes\) [\#803](https://github.com/voxpupuli/puppet-zabbix/pull/803) ([Fabian1976](https://github.com/Fabian1976))
 - Bump lower bound of systemd to 3.1.0 [\#791](https://github.com/voxpupuli/puppet-zabbix/pull/791) ([root-expert](https://github.com/root-expert))
